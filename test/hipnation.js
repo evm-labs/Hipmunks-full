@@ -2,12 +2,6 @@ const Hipnation = artifacts.require("Hipnation");
 const truffleAssert = require('truffle-assertions');
 
 contract("First Hipnation test", async accounts => {
-  it("sample test should pass", async () => {
-    const instance = await Hipnation.deployed();
-    const balance = await instance.getBalance.call(accounts[0]);
-    assert.equal(1, 1);
-  });
-});
 
 /*
 Tests
@@ -34,3 +28,11 @@ Tests
 
 
 */
+
+  it("sample test should pass", async () => {
+    const instance = await Hipnation.deployed();
+    const balance = await instance.getBalance.call(accounts[0]);
+    assert.equal(1, 1);
+  });
+});
+
