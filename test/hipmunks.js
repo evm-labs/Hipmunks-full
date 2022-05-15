@@ -1,4 +1,4 @@
-const Hipnation = artifacts.require("Hipnation");
+const Hipmunks = artifacts.require("HippieHipsterChipmunks");
 
 contract("First hipmunks test", async accounts => {
 
@@ -10,14 +10,8 @@ Tests
 */
 
   it("sample test should pass", async () => {
-    const instance = await Hipnation.deployed();
+    const instance = await Hipmunks.deployed();
     const balance = await instance.getBalance.call(accounts[0]);
     assert.equal(1, 1);
   });
 });
-
-/*
-Tests
-
-
-*/
