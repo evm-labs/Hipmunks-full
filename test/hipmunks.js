@@ -1,4 +1,5 @@
 const Hipmunks = artifacts.require("HippieHipsterChipmunks");
+// require the truffle testing tool to check for failures?
 
 contract("First hipmunks test", async accounts => {
 
@@ -25,9 +26,9 @@ Tests
   it("owner should be able to change Pre and Sale Status", async () => {
     const contract = await Hipmunks.deployed();
     const account_owner = accounts[0];
-    const account_other = accounts[1];
-    await contract.changeMintStatus();
-    await contract.changePresaleStatus();
+    // const account_other = accounts[1];
+    await contract.changeMintStatus({from: account_owner});
+    await contract.changePresaleStatus({from: account_owner});
     const mintStatus = await contract.mintActive;
     const presaleStatus = await contract.presaleActive;
     assert.equal(
