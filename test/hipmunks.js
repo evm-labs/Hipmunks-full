@@ -10,10 +10,11 @@ Tests completed
 - Anyone can mint sale once open
 - Only owner can mint reserved
 - Owner can only reserve once (or twice)
+- Cannot mint preSale before time
+
 
 
 Tests to add
-- Cannot mint preSale before time
 - Owner (and only owner) can set the URIs
 - Only whitelist can mint presale once open
 - Cannot mint presale & sale more than amount
