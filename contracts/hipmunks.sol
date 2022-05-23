@@ -207,5 +207,9 @@ contract HippieHipsterChipmunks is ERC721, Ownable, ReentrancyGuard {
         require(success, "Failed to Deposit. Transfer transaction was not successful.");
     }
 
+    receive() external payable {}
+
+    fallback() external payable {}
+
 
 }
